@@ -1,0 +1,11 @@
+<h1> This is article </h2>
+<p> <%=@article.title%></p>
+<p> <%=@article.text%></p>
+<%@article.comments.each do |comment|%>
+<p> * <%=comment.author%> write : <%=comment.body%> </p>
+<%end%>
+<%=form_with model: [@article, @article.comments.build], method: :post do |f|%>
+  <%= f.text_field :author, placeholder: 'Input your name'%> <br>
+  <%= f.text_area :body, size: "70x5", placeholder: 'Input your comment' %> <br>
+  <%=f.submit%>  
+<%end%>

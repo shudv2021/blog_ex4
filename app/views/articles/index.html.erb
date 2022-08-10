@@ -1,0 +1,11 @@
+<h1> This is all available articles </h1>
+
+<ol> 
+<%@articles.each do |article|%>
+<li>
+<%= link_to "#{article.title}", article_path(article)%>
+</li>
+<%end%>
+
+</ol>
+<%=button_to 'Add article', new_article_path, method: :get %>
