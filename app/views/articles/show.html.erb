@@ -4,8 +4,10 @@
 <%@article.comments.each do |comment|%>
 <p> * <%=comment.author%> write : <%=comment.body%> </p>
 <%end%>
+<%if user_signed_in?%>
 <%=form_with model: [@article, @article.comments.build], method: :post do |f|%>
-  <%= f.text_field :author, placeholder: 'Input your name'%> <br>
+  <%= f.text_field :author, value: current_user.name, type: :hidden%> <br>
   <%= f.text_area :body, size: "70x5", placeholder: 'Input your comment' %> <br>
   <%=f.submit%>  
+<%end%>
 <%end%>
