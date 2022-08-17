@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :articles
   validates :email, format:{ :with => /@/}
   validates :name, presence: true
   validates :email, presence: true
