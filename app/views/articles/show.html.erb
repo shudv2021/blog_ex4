@@ -1,6 +1,7 @@
 <h1> This is article </h2>
 <p> <%=@article.title%></p>
 <p> <%=@article.text%></p>
+<%=link_to 'Edit article', edit_article_path, class: 'btn btn-success' %>
 <%@article.comments.each do |comment|%>
 <p> * <%=comment.author%> write : <%=comment.body%> </p>
 <%end%>
