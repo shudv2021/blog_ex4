@@ -21,7 +21,7 @@ describe Article do
   describe '#last_comment' do
     it 'returne last comment' do
       article = create(:article_with_comments)
-      expect(article.last_comment).to eq "3"
+      expect(article.last_comment.body).to eq '3'
     end
   end
   
