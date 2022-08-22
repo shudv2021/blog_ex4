@@ -1,6 +1,6 @@
 FactoryBot.define do
-  factory :comments do 
+  factory :comment do 
     author { 'mike' }
-    sequince(:body) { |n| "comment body #{n}" }
-  
+    sequence(:body) { |n| "#{n}" }
+  end
 end #finish 
