@@ -9,8 +9,4 @@ describe Article do
     it { should validate_presence_of :title }
     it { should validate_presence_of :text }
   end
-  
-  desctibe '#subject' do
-    
-  end
 end
