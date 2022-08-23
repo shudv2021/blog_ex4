@@ -5,7 +5,11 @@ class ContactsController < ApplicationController
   
   def create
     message = Contact.new(contact_params)    
-    message.save
+    if message.save
+    else
+      render 'new'
+    end
+    
   end
   
   private
