@@ -1,0 +1,12 @@
+<h1> Send message  </h1>
+<%=form_with url: contacts_path do |f|%>
+  <p> 
+    <%=f.text_field :email, placeholder: 'Input your email'%>
+  </p>
+  <p>
+    <%=f.text_area :message, size: '75x10', placeholder: 'Input your message'%>
+  </p>
+  <p>
+    <%=f.submit 'Send message', class: 'btn btn-primary' %>
+  </p>
+<%end%>
