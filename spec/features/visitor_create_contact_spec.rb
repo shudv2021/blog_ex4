@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-feature '....' do
-  scenario '....' do
-  
+feature 'Contacts Creation' do
+  scenario 'allows acers to contact pages' do
+    visit '/contacts/new'
+    expect(page).to have_content 'Send message'
   end
   
 end
