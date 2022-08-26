@@ -2,6 +2,7 @@
 require "spec_helper"
 require 'capybara/rspec'
 require 'support/factory_bot.rb'
+require 'support/session_helper.rb'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
