@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 feature 'Article Createion' do 
+  #like callback
   before(:all) do
     sign_up
   end

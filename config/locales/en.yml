@@ -32,6 +32,12 @@
 en:
   hello: "Hello world"
 
-
+  nav:
+    title: 'RailsBlog'
+    contact_us: 'Contact us'
+    login: 'Login'
+    logout: "Logout %{user_name}"
   contacts:
     contact_us: 'Send us a message'
+  article: 
+    title: 'This is article list'
