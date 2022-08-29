@@ -11,7 +11,7 @@ feature 'Contacts Creation' do
       fill_in :email, :with => 'new@mail.ru'
       fill_in :message, :with => 'new message'
       click_button 'Send message'
-      expect(page).to have_content 'Rails-blog'
+      expect(page).to have_content I18n.t('nav.title')
   end 
   
 end
